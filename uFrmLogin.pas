@@ -37,10 +37,9 @@ implementation
 
 {$R *.dfm}
 
-uses uFrmMenuPrincipal, UFrmCadPaciente, UnFunctions;
+uses uFrmMenuPrincipal, UFrmCadPaciente;
 
 procedure TFrmLogin.Button1Click(Sender: TObject);
-
 begin
   ValidarLogin;
   FrmLogin.Hide;

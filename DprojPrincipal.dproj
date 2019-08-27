@@ -110,7 +110,6 @@
         <DCCReference Include="UFrmCadPaciente.pas">
             <Form>FrmCadastroPaciente</Form>
         </DCCReference>
-        <DCCReference Include="Unit\UnFunctions.pas"/>
         <DCCReference Include="uFrmConsultasMarcadas.pas">
             <Form>FrmConsultasMarcadas</Form>
         </DCCReference>
@@ -120,6 +119,10 @@
         </DCCReference>
         <DCCReference Include="uFrmLogin.pas">
             <Form>FrmLogin</Form>
+        </DCCReference>
+        <DCCReference Include="uFrmRelatorios.pas">
+            <Form>FrmRelAtestado</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

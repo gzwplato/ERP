@@ -23,9 +23,14 @@ type
     Image1: TImage;
     LblNomeempresa: TLabel;
     A1: TMenuItem;
+    Relatrios1: TMenuItem;
+    Atestado1: TMenuItem;
+    Atestado2: TMenuItem;
+    Agendamentos1: TMenuItem;
     procedure Timer1Timer(Sender: TObject);
     procedure Paciente1Click(Sender: TObject);
     procedure Marcadas1Click(Sender: TObject);
+    procedure Atestado1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,32 +44,24 @@ implementation
 
 {$R *.dfm}
 
-uses UFrmCadPaciente, UnFunctions, uFrmConsultasMarcadas, uFrmLogin;
+uses UFrmCadPaciente, uFrmConsultasMarcadas, uFrmLogin, uFrmRelatorios;
+
+procedure TFrmPai.Atestado1Click(Sender: TObject);
+begin
+  FrmRelAtestado.ShowModal;
+  FrmRelAtestado.Visible := true;
+end;
 
 procedure TFrmPai.Marcadas1Click(Sender: TObject);
-var
-  ChamaTela : TFrmConsultasMarcadas;
 begin
-    ChamaTela := TFrmConsultasMarcadas.Create(Self);
-  try
-    ChamaTela.ShowModal;
-    ChamaTela.Visible := true;
-  finally
-    FreeAndNil(ChamaTela);
-  end;
+  FrmConsultasMarcadas.ShowModal;
+  FrmConsultasMarcadas.Visible := true;
 end;
 
 procedure TFrmPai.Paciente1Click(Sender: TObject);
-var
-  ChamaTela : TFrmCadastroPaciente;
 begin
-  ChamaTela := TFrmCadastroPaciente.Create(Self);
-  try
-    ChamaTela.ShowModal;
-    ChamaTela.Visible := true;
-  finally
-    FreeAndNil(ChamaTela);
-  end;
+  FrmCadastroPaciente.ShowModal;
+  FrmCadastroPaciente.Visible := true;
 end;
 
 procedure TFrmPai.Timer1Timer(Sender: TObject);

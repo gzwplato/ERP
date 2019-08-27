@@ -35,7 +35,6 @@ implementation
 
 {$R *.dfm}
 
-uses UnFunctions;
 
 type
   RgPaciente = Record
