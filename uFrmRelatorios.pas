@@ -9,7 +9,6 @@ uses
 
 type
   TFrmRelAtestado = class(TForm)
-    Panel1: TPanel;
     Panel2: TPanel;
     MaskEdit1: TMaskEdit;
     MEDTipoPessoa: TMaskEdit;
@@ -26,7 +25,7 @@ type
   end;
 
 var
-  FrmRelAtestado: TFrmRelAtestado;
+  FrmRelatorios : TFrmRelAtestado;
 
 implementation
 

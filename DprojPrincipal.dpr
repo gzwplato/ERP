@@ -19,6 +19,6 @@ begin
   Application.CreateForm(TFrmCadastroPaciente, FrmCadastroPaciente);
   Application.CreateForm(TFrmConsultasMarcadas, FrmConsultasMarcadas);
   Application.CreateForm(TDataTabelas, DataTabelas);
-  Application.CreateForm(TFrmRelAtestado, FrmRelAtestado);
+  Application.CreateForm(TFrmRelAtestado, FrmRelatorios);
   Application.Run;
 end.

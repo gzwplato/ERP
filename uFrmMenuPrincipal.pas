@@ -27,10 +27,13 @@ type
     Atestado1: TMenuItem;
     Atestado2: TMenuItem;
     Agendamentos1: TMenuItem;
+    LaudoPsicolgico1: TMenuItem;
     procedure Timer1Timer(Sender: TObject);
     procedure Paciente1Click(Sender: TObject);
     procedure Marcadas1Click(Sender: TObject);
     procedure Atestado1Click(Sender: TObject);
+    procedure Agendamentos1Click(Sender: TObject);
+    procedure Atestado2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,10 +49,25 @@ implementation
 
 uses UFrmCadPaciente, uFrmConsultasMarcadas, uFrmLogin, uFrmRelatorios;
 
+procedure TFrmPai.Agendamentos1Click(Sender: TObject);
+begin
+  FrmRelatorios.Caption := 'Relatório de Agendamento';
+  FrmRelatorios.ShowModal;
+  FrmRelatorios.Visible := true;
+end;
+
 procedure TFrmPai.Atestado1Click(Sender: TObject);
 begin
-  FrmRelAtestado.ShowModal;
-  FrmRelAtestado.Visible := true;
+  FrmRelatorios.Caption := 'Relatório de Declaração';
+  FrmRelatorios.ShowModal;
+  FrmRelatorios.Visible := true;
+end;
+
+procedure TFrmPai.Atestado2Click(Sender: TObject);
+begin
+  FrmRelatorios.Caption := 'Relatório de Atestado';
+  FrmRelatorios.ShowModal;
+  FrmRelatorios.Visible := true;
 end;
 
 procedure TFrmPai.Marcadas1Click(Sender: TObject);

@@ -13,47 +13,30 @@ object FrmRelAtestado: TFrmRelAtestado
   Position = poMainFormCenter
   PixelsPerInch = 96
   TextHeight = 13
-  object Panel1: TPanel
+  object Panel2: TPanel
     Left = 0
     Top = 0
     Width = 521
-    Height = 41
-    Align = alTop
-    TabOrder = 0
-    ExplicitTop = -5
-  end
-  object Panel2: TPanel
-    Left = 0
-    Top = 41
-    Width = 521
-    Height = 199
+    Height = 240
     Align = alClient
     Color = clGradientActiveCaption
     ParentBackground = False
-    TabOrder = 1
-    ExplicitLeft = 144
-    ExplicitTop = 112
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    TabOrder = 0
     object Memo1: TMemo
       Left = 181
       Top = 1
       Width = 339
-      Height = 197
+      Height = 238
       Align = alClient
       Lines.Strings = (
         'Memo1')
       TabOrder = 0
-      ExplicitLeft = 192
-      ExplicitTop = 6
-      ExplicitWidth = 185
-      ExplicitHeight = 89
     end
     object Panel3: TPanel
       Left = 1
       Top = 1
       Width = 180
-      Height = 197
+      Height = 238
       Align = alLeft
       TabOrder = 1
       object Label1: TLabel
