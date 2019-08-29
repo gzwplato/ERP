@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.Imaging.pngimage, Vcl.Buttons;
+  Vcl.Imaging.pngimage;
 
 type
   TFrmLogin = class(TForm)
@@ -17,11 +17,9 @@ type
     Edit1: TEdit;
     Edit2: TEdit;
     Label3: TLabel;
-    SpeedButton2: TSpeedButton;
     procedure Button1Click(Sender: TObject);
     procedure Edit2KeyPress(Sender: TObject; var Key: Char);
     procedure Edit1KeyPress(Sender: TObject; var Key: Char);
-    procedure SpeedButton2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -62,11 +60,6 @@ procedure TFrmLogin.Edit2KeyPress(Sender: TObject; var Key: Char);
 begin
   if  (Key in['a'..'z']) or (Key in['A'..'Z']) then
     raise Exception.Create('Esse campo aceita apenas números');
-end;
-
-procedure TFrmLogin.SpeedButton2Click(Sender: TObject);
-begin
-  FrmLogin.Close;
 end;
 
 function TFrmLogin.ValidarLogin: String;
