@@ -10,16 +10,17 @@ uses
 type
   TFrmCadastroPaciente = class(TForm)
     Panel1: TPanel;
-    EdtNome: TEdit;
+    Panel2: TPanel;
     Label1: TLabel;
-    DateTimePicker1: TDateTimePicker;
     LblDatanasc: TLabel;
     Label2: TLabel;
+    SpeedButton1: TSpeedButton;
+    SBTGerarDoc: TSpeedButton;
+    EdtNome: TEdit;
+    DateTimePicker1: TDateTimePicker;
     MmObs: TMemo;
     BtnEnviarDados: TButton;
     EdtTipoPessoa: TMaskEdit;
-    SpeedButton1: TSpeedButton;
-    SBTGerarDoc: TSpeedButton;
     procedure EdtNomeKeyPress(Sender: TObject; var Key: Char);
     procedure EdtTipoPessoaKeyPress(Sender: TObject; var Key: Char);
     procedure BtnEnviarDadosClick(Sender: TObject);

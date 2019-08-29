@@ -3029,9 +3029,11 @@ object FrmPai: TFrmPai
       end
       object A1: TMenuItem
         Caption = 'Agendar'
+        OnClick = A1Click
       end
       object LaudoPsicolgico1: TMenuItem
         Caption = 'Laudo Psicol'#243'gico'
+        OnClick = LaudoPsicolgico1Click
       end
     end
     object Cadastro1: TMenuItem

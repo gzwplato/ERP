@@ -37,6 +37,8 @@ type
     procedure Agendamentos1Click(Sender: TObject);
     procedure Atestado2Click(Sender: TObject);
     procedure Usuario1Click(Sender: TObject);
+    procedure LaudoPsicolgico1Click(Sender: TObject);
+    procedure A1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,6 +54,11 @@ implementation
 
 uses UFrmCadPaciente, uFrmConsultasMarcadas, uFrmLogin, uFrmRelatorios,
   uFrmUsuario;
+
+procedure TFrmPai.A1Click(Sender: TObject);
+begin
+  MessageDlg('Tela ainda em construção', mtInformation, [mbOK], 0);
+end;
 
 procedure TFrmPai.Agendamentos1Click(Sender: TObject);
 begin
@@ -72,6 +79,11 @@ begin
   FrmRelatorios.Caption := 'Relatório de Atestado';
   FrmRelatorios.ShowModal;
   FrmRelatorios.Visible := true;
+end;
+
+procedure TFrmPai.LaudoPsicolgico1Click(Sender: TObject);
+begin
+  MessageDlg('Tela ainda em construção', mtInformation, [mbOK], 0);
 end;
 
 procedure TFrmPai.Marcadas1Click(Sender: TObject);
