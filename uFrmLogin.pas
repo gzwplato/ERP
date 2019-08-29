@@ -17,6 +17,7 @@ type
     Button1: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Edit2KeyPress(Sender: TObject; var Key: Char);
+    procedure Edit1KeyPress(Sender: TObject; var Key: Char);
   private
     { Private declarations }
   public
@@ -47,9 +48,15 @@ begin
   FrmLogin.Close;
 end;
 
+procedure TFrmLogin.Edit1KeyPress(Sender: TObject; var Key: Char);
+begin
+  if  (Key in['1'..'9']) then
+    raise Exception.Create('Esse campo aceita apenas letras');
+end;
+
 procedure TFrmLogin.Edit2KeyPress(Sender: TObject; var Key: Char);
 begin
- if  (Key in['a'..'z']) or (Key in['A'..'Z']) then
+  if  (Key in['a'..'z']) or (Key in['A'..'Z']) then
     raise Exception.Create('Esse campo aceita apenas números');
 end;
 
@@ -58,7 +65,7 @@ begin
   login.usuario := 'matheus';
   login.senha := '123';
   if  (Edit1.Text <> login.usuario) or (Edit2.Text <> login.senha) then
-    raise Exception.Create('Você não está cadastrado')
+    raise Exception.Create('Você não está cadastrado ou suas credenciais estão incorretas')
   else
     Exit;
 end;

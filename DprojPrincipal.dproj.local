@@ -9,18 +9,21 @@
     <Transaction>2019/08/15 20:23:06.000.095,=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.pas</Transaction>
     <Transaction>2019/08/15 20:27:38.000.866,C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.pas=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit\UnFunctions.pas</Transaction>
     <Transaction>2019/08/18 10:03:30.000.768,=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit3.pas</Transaction>
-    <Transaction>2019/08/18 10:04:51.000.234,C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit3.dfm=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\uFrmConsultasMarcadas.dfm</Transaction>
     <Transaction>2019/08/18 10:04:51.000.234,C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit3.pas=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\uFrmConsultasMarcadas.pas</Transaction>
+    <Transaction>2019/08/18 10:04:51.000.234,C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit3.dfm=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\uFrmConsultasMarcadas.dfm</Transaction>
     <Transaction>2019/08/18 10:24:47.000.152,=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.pas</Transaction>
     <Transaction>2019/08/18 10:25:11.000.144,C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.pas=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\unTabelas.pas</Transaction>
     <Transaction>2019/08/18 10:25:11.000.144,C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.dfm=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\unTabelas.dfm</Transaction>
     <Transaction>2019/08/23 09:09:11.000.743,=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.pas</Transaction>
-    <Transaction>2019/08/23 09:28:04.000.095,C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\uFrmLogin.pas=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.pas</Transaction>
     <Transaction>2019/08/23 09:28:04.000.095,C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\uFrmLogin.dfm=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.dfm</Transaction>
+    <Transaction>2019/08/23 09:28:04.000.095,C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\uFrmLogin.pas=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.pas</Transaction>
     <Transaction>2019/08/27 13:26:47.000.391,=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.pas</Transaction>
     <Transaction>2019/08/27 13:59:19.000.984,=C:\Users\1547\Documents\ERP\Unit1.pas</Transaction>
     <Transaction>2019/08/27 14:04:23.000.980,C:\Users\1547\Documents\ERP\uFrmRelatorios.pas=C:\Users\1547\Documents\ERP\Unit1.pas</Transaction>
     <Transaction>2019/08/27 14:04:23.000.980,C:\Users\1547\Documents\ERP\uFrmRelatorios.dfm=C:\Users\1547\Documents\ERP\Unit1.dfm</Transaction>
+    <Transaction>2019/08/29 10:55:40.878,=C:\Users\1547\Documents\ERP\Unit1.pas</Transaction>
+    <Transaction>2019/08/29 11:22:37.902,C:\Users\1547\Documents\ERP\uFrmUsuario.pas=C:\Users\1547\Documents\ERP\Unit1.pas</Transaction>
+    <Transaction>2019/08/29 11:22:37.903,C:\Users\1547\Documents\ERP\uFrmUsuario.dfm=C:\Users\1547\Documents\ERP\Unit1.dfm</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="uFrmLogin.pas"/>
@@ -35,5 +38,7 @@
     <File Path="unTabelas.dfm"/>
     <File Path="uFrmRelatorios.pas"/>
     <File Path="uFrmRelatorios.dfm"/>
+    <File Path="uFrmUsuario.pas"/>
+    <File Path="uFrmUsuario.dfm"/>
   </ProjectSortOrder>
 </BorlandProject>

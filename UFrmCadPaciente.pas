@@ -17,10 +17,11 @@ type
     Label2: TLabel;
     MmObs: TMemo;
     BtnEnviarDados: TButton;
-    EdtTipoPessoal: TMaskEdit;
+    EdtTipoPessoa: TMaskEdit;
     SpeedButton1: TSpeedButton;
+    SBTGerarDoc: TSpeedButton;
     procedure EdtNomeKeyPress(Sender: TObject; var Key: Char);
-    procedure EdtTipoPessoalKeyPress(Sender: TObject; var Key: Char);
+    procedure EdtTipoPessoaKeyPress(Sender: TObject; var Key: Char);
     procedure BtnEnviarDadosClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
   private
@@ -47,14 +48,14 @@ End;
 
 procedure TFrmCadastroPaciente.BtnEnviarDadosClick(Sender: TObject);
 begin
-  if (EdtNome.Text = EmptyStr) or (EdtTipoPessoal.Text = '   .   .   -  ') or (EdtTipoPessoal.Text = '  .  .  /  -  ')  then
+  if (EdtNome.Text = EmptyStr) or (EdtTipoPessoa.Text = '   .   .   -  ') or (EdtTipoPessoa.Text = '  .   .   /    -  ')  then
     raise Exception.Create('Todas as credenciais tende está preenchida')
   else
     //dados serão inseridos no banco
     // MessageDlg('Dados salvos com sucesso', [mtInformation], [mbOK]);
     ShowMessage('Dados salvos com sucesso');
     EdtNome.Clear;
-    EdtTipoPessoal.Clear;
+    EdtTipoPessoa.Clear;
     MmObs.Clear;
 end;
 
@@ -64,7 +65,7 @@ begin
     raise Exception.Create('Esse campo aceita apenas letras');
 end;
 
-procedure TFrmCadastroPaciente.EdtTipoPessoalKeyPress(Sender: TObject;
+procedure TFrmCadastroPaciente.EdtTipoPessoaKeyPress(Sender: TObject;
   var Key: Char);
 begin
   if  not (Key in['0'..'9']) then
@@ -73,19 +74,21 @@ end;
 
 procedure TFrmCadastroPaciente.SpeedButton1Click(Sender: TObject);
 begin
-  if EdtTipoPessoal.EditMask = '000.000.000-00'  then
+  if EdtTipoPessoa.EditMask = '000.000.000-00'  then
   begin
+    EdtTipoPessoa.Clear;
     SpeedButton1.Glyph.LoadFromFile('C:\Users\1547\Documents\ERP\Icones\Friends.bmp');
     Label2.Caption := 'CNPJ';
-    EdtTipoPessoal.EditMask := '00.000.000/0000-00';
-    EdtTipoPessoal.Width := 100;
+    EdtTipoPessoa.EditMask := '00.000.000/0000-00';
+    EdtTipoPessoa.Width := 100;
   end
   else
     begin
+    EdtTipoPessoa.Clear;
     SpeedButton1.Glyph.LoadFromFile('C:\Users\1547\Documents\ERP\Icones\Boy.bmp');
     Label2.Caption := 'CPF';
-    EdtTipoPessoal.EditMask := '000.000.000-00';
-    EdtTipoPessoal.Width := 84;
+    EdtTipoPessoa.EditMask := '000.000.000-00';
+    EdtTipoPessoa.Width := 84;
   end;
 end;
 

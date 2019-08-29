@@ -3014,6 +3014,13 @@ object FrmPai: TFrmPai
   object MainMenu1: TMainMenu
     Left = 552
     Top = 208
+    object Sistema1: TMenuItem
+      Caption = 'Sistema'
+      object Usuario1: TMenuItem
+        Caption = 'Usu'#225'rio'
+        OnClick = Usuario1Click
+      end
+    end
     object Consultas1: TMenuItem
       Caption = 'Consultas'
       object Marcadas1: TMenuItem

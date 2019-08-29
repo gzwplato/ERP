@@ -28,12 +28,15 @@ type
     Atestado2: TMenuItem;
     Agendamentos1: TMenuItem;
     LaudoPsicolgico1: TMenuItem;
+    Sistema1: TMenuItem;
+    Usuario1: TMenuItem;
     procedure Timer1Timer(Sender: TObject);
     procedure Paciente1Click(Sender: TObject);
     procedure Marcadas1Click(Sender: TObject);
     procedure Atestado1Click(Sender: TObject);
     procedure Agendamentos1Click(Sender: TObject);
     procedure Atestado2Click(Sender: TObject);
+    procedure Usuario1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,7 +50,8 @@ implementation
 
 {$R *.dfm}
 
-uses UFrmCadPaciente, uFrmConsultasMarcadas, uFrmLogin, uFrmRelatorios;
+uses UFrmCadPaciente, uFrmConsultasMarcadas, uFrmLogin, uFrmRelatorios,
+  uFrmUsuario;
 
 procedure TFrmPai.Agendamentos1Click(Sender: TObject);
 begin
@@ -86,6 +90,11 @@ procedure TFrmPai.Timer1Timer(Sender: TObject);
 begin
   StatusBar1.Panels[1].Text := 'Date : ' + datetostr(date);
   StatusBar1.Panels[2].Text := 'Hora : ' + TimeToStr(Time);
+end;
+
+procedure TFrmPai.Usuario1Click(Sender: TObject);
+begin
+  FrmUsuario.ShowModal;
 end;
 
 end.
