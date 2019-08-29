@@ -21,10 +21,12 @@ type
     MmObs: TMemo;
     BtnEnviarDados: TButton;
     EdtTipoPessoa: TMaskEdit;
+    SpeedButton2: TSpeedButton;
     procedure EdtNomeKeyPress(Sender: TObject; var Key: Char);
     procedure EdtTipoPessoaKeyPress(Sender: TObject; var Key: Char);
     procedure BtnEnviarDadosClick(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -91,6 +93,11 @@ begin
     EdtTipoPessoa.EditMask := '000.000.000-00';
     EdtTipoPessoa.Width := 84;
   end;
+end;
+
+procedure TFrmCadastroPaciente.SpeedButton2Click(Sender: TObject);
+begin
+  FrmCadastroPaciente.Close;
 end;
 
 end.

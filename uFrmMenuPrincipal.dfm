@@ -1,6 +1,7 @@
 object FrmPai: TFrmPai
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
   Caption = 'SysMed'
   ClientHeight = 370
   ClientWidth = 1329
@@ -345,7 +346,7 @@ object FrmPai: TFrmPai
   TextHeight = 13
   object Image1: TImage
     Left = 0
-    Top = -8
+    Top = -24
     Width = 1432
     Height = 842
     Align = alCustom
@@ -2988,6 +2989,7 @@ object FrmPai: TFrmPai
     Top = 338
     Width = 1329
     Height = 32
+    Align = alCustom
     Panels = <
       item
         Text = 'Primeira video aula'

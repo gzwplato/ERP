@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.ComCtrls, Vcl.Imaging.jpeg;
+  Vcl.ComCtrls, Vcl.Imaging.jpeg, Vcl.Buttons;
 
 type
   TFrmPai = class(TForm)
@@ -39,6 +39,7 @@ type
     procedure Usuario1Click(Sender: TObject);
     procedure LaudoPsicolgico1Click(Sender: TObject);
     procedure A1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -96,6 +97,11 @@ procedure TFrmPai.Paciente1Click(Sender: TObject);
 begin
   FrmCadastroPaciente.ShowModal;
   FrmCadastroPaciente.Visible := true;
+end;
+
+procedure TFrmPai.SpeedButton2Click(Sender: TObject);
+begin
+  FrmPai.Close;
 end;
 
 procedure TFrmPai.Timer1Timer(Sender: TObject);

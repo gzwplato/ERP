@@ -20,6 +20,7 @@ type
     LblNovasenha: TLabel;
     LblMatricula: TLabel;
     SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
     procedure Button3Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -27,6 +28,7 @@ type
     procedure EdtSenhaKeyPress(Sender: TObject; var Key: Char);
     procedure EdtMatriculaKeyPress(Sender: TObject; var Key: Char);
     procedure EdtNomeKeyPress(Sender: TObject; var Key: Char);
+    procedure SpeedButton2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -118,6 +120,11 @@ begin
       MessageDlg('Usuário Adicionado', mtInformation, [mbOK], 0);
     end;
   end;
+end;
+
+procedure TForm1.SpeedButton2Click(Sender: TObject);
+begin
+  FrmUsuario.Close;
 end;
 
 end.
