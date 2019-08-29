@@ -46,7 +46,7 @@ object Form1: TForm1
     ExplicitHeight = 160
     object Button1: TButton
       Left = 24
-      Top = 83
+      Top = 69
       Width = 75
       Height = 24
       Caption = 'Aterar senha'
@@ -55,21 +55,12 @@ object Form1: TForm1
     end
     object Button2: TButton
       Left = 24
-      Top = 124
+      Top = 39
       Width = 75
       Height = 24
       Caption = 'Novo Usu'#225'rio'
       TabOrder = 1
       OnClick = Button2Click
-    end
-    object Button3: TButton
-      Left = 22
-      Top = 39
-      Width = 75
-      Height = 24
-      Caption = 'Esqueceu '
-      TabOrder = 2
-      OnClick = Button3Click
     end
   end
   object Panel3: TPanel

@@ -20,7 +20,6 @@ type
     LblNovasenha: TLabel;
     LblMatricula: TLabel;
     SpeedButton1: TSpeedButton;
-    Button3: TButton;
     procedure Button3Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -43,6 +42,9 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
+  EdtNome.Clear;
+  EdtSenha.Clear;
+  EdtMatricula.Clear;
   LblUsuario.Visible := false;
   EdtNome.Visible := false;
   LblMatricula.Top := 23;
@@ -51,6 +53,9 @@ end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
+  EdtNome.Clear;
+  EdtSenha.Clear;
+  EdtMatricula.Clear;
   LblMatricula.Top := 111;
   EdtMatricula.Top := 127;
   LblUsuario.Visible := true;
@@ -61,6 +66,9 @@ end;
 
 procedure TForm1.Button3Click(Sender: TObject);
 begin
+  EdtNome.Clear;
+  EdtSenha.Clear;
+  EdtMatricula.Clear;
   LblUsuario.Visible := false;
   EdtNome.Visible := false;
   LblMatricula.Top := 23;
@@ -88,9 +96,28 @@ end;
 procedure TForm1.SpeedButton1Click(Sender: TObject);
 begin
   if EdtNome.Visible = false then
-    MessageDlg('Senha Alterada com sucesso', mtInformation, [mbOK], 0)
-  else
-    MessageDlg('Usuário Adicionado', mtInformation, [mbOK], 0)
+  begin
+    if (EdtSenha.Text = '') or (EdtMatricula.Text = '') then
+    begin
+     raise Exception.Create('Credencias não preenchidas');
+
+    end
+    else
+    begin
+      MessageDlg('Senha Alterada com sucesso', mtInformation, [mbOK], 0)
+    end;
+  end;
+  if EdtNome.Visible = true then
+  begin
+    if  (EdtNome.Text = '') or (EdtSenha.Text = '') or (EdtMatricula.Text = '') then
+    begin
+      raise Exception.Create('Credencias não preenchidas');
+    end
+    else
+    begin
+      MessageDlg('Usuário Adicionado', mtInformation, [mbOK], 0);
+    end;
+  end;
 end;
 
 end.
