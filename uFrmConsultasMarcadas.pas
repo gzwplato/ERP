@@ -13,12 +13,6 @@ type
     MaskEdit1: TMaskEdit;
     Button1: TButton;
     DBGrid1: TDBGrid;
-    DataSource1: TDataSource;
-    ClientDataSet1: TClientDataSet;
-    ClientDataSet1Nome: TStringField;
-    ClientDataSet1Médico: TStringField;
-    ClientDataSet1Data: TDateTimeField;
-    SQLConnection1: TSQLConnection;
   private
     { Private declarations }
   public

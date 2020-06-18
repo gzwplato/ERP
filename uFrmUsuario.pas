@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Data.Win.ADODB;
 
 type
   TForm1 = class(TForm)
@@ -20,6 +21,7 @@ type
     LblNovasenha: TLabel;
     LblMatricula: TLabel;
     SpeedButton1: TSpeedButton;
+    ADOCommInsertUsusario: TADOCommand;
     procedure Button3Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -39,6 +41,8 @@ var
 implementation
 
 {$R *.dfm}
+
+uses unTabelas;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
@@ -95,29 +99,10 @@ end;
 
 procedure TForm1.SpeedButton1Click(Sender: TObject);
 begin
-  if EdtNome.Visible = false then
-  begin
-    if (EdtSenha.Text = '') or (EdtMatricula.Text = '') then
-    begin
-     raise Exception.Create('Credencias não preenchidas');
-
-    end
-    else
-    begin
-      MessageDlg('Senha Alterada com sucesso', mtInformation, [mbOK], 0)
-    end;
-  end;
-  if EdtNome.Visible = true then
-  begin
-    if  (EdtNome.Text = '') or (EdtSenha.Text = '') or (EdtMatricula.Text = '') then
-    begin
-      raise Exception.Create('Credencias não preenchidas');
-    end
-    else
-    begin
-      MessageDlg('Usuário Adicionado', mtInformation, [mbOK], 0);
-    end;
-  end;
+  ADOCommInsertUsusario.Parameters.ParamByName('Usuario').Value := EdtNome.Text;
+  ADOCommInsertUsusario.Parameters.ParamByName('senha').Value := StrToInt(EdtSenha.Text);
+  ADOCommInsertUsusario.Parameters.ParamByName('matricula').Value := StrToInt(EdtMatricula.Text);
+  ADOCommInsertUsusario.Execute;
 end;
 
 end.

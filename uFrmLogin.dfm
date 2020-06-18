@@ -351,8 +351,6 @@ object FrmLogin: TFrmLogin
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 24
-    ExplicitTop = -24
     object Label2: TLabel
       Left = 96
       Top = 133
@@ -511,21 +509,37 @@ object FrmLogin: TFrmLogin
       TabOrder = 0
       OnClick = Button1Click
     end
-    object Edit1: TEdit
+    object EdtLogin: TEdit
       Left = 96
       Top = 111
       Width = 121
       Height = 21
       TabOrder = 1
-      OnKeyPress = Edit1KeyPress
+      OnKeyPress = EdtLoginKeyPress
     end
-    object Edit2: TEdit
+    object EdtSenha: TEdit
       Left = 96
       Top = 149
       Width = 121
       Height = 21
       TabOrder = 2
-      OnKeyPress = Edit2KeyPress
+      OnKeyPress = EdtSenhaKeyPress
+    end
+  end
+  object QryLogin: TADOQuery
+    Connection = DataTabelas.ADOMasterSysMed
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select Usuario, senha from LoginUsuario')
+    Left = 72
+    Top = 24
+    object QryLoginUsuario: TStringField
+      FieldName = 'Usuario'
+      Size = 10
+    end
+    object QryLoginsenha: TIntegerField
+      FieldName = 'senha'
     end
   end
 end

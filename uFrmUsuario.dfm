@@ -30,9 +30,6 @@ object Form1: TForm1
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitLeft = 136
-    ExplicitTop = 104
-    ExplicitWidth = 185
   end
   object Panel2: TPanel
     Left = 0
@@ -43,7 +40,6 @@ object Form1: TForm1
     Color = clInactiveCaption
     ParentBackground = False
     TabOrder = 1
-    ExplicitHeight = 160
     object Button1: TButton
       Left = 24
       Top = 69
@@ -72,9 +68,6 @@ object Form1: TForm1
     Color = clInactiveCaption
     ParentBackground = False
     TabOrder = 2
-    ExplicitLeft = 135
-    ExplicitWidth = 318
-    ExplicitHeight = 160
     object LblUsuario: TLabel
       Left = 24
       Top = 23
@@ -239,5 +232,38 @@ object Form1: TForm1
       TabOrder = 2
       OnKeyPress = EdtMatriculaKeyPress
     end
+  end
+  object ADOCommInsertUsusario: TADOCommand
+    CommandText = 
+      'insert into LoginUsuario(Usuario, senha, matricula)'#13#10'values(:Usu' +
+      'ario, :senha, :matricula)'
+    Connection = DataTabelas.ADOMasterSysMed
+    Parameters = <
+      item
+        Name = 'Usuario'
+        DataType = ftString
+        NumericScale = 255
+        Precision = 255
+        Size = 10
+        Value = Null
+      end
+      item
+        Name = 'senha'
+        Attributes = [paSigned, paNullable]
+        DataType = ftInteger
+        Precision = 10
+        Size = 4
+        Value = Null
+      end
+      item
+        Name = 'matricula'
+        Attributes = [paSigned, paNullable]
+        DataType = ftInteger
+        Precision = 10
+        Size = 4
+        Value = Null
+      end>
+    Left = 72
+    Top = 16
   end
 end

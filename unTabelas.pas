@@ -3,10 +3,11 @@ unit unTabelas;
 interface
 
 uses
-  System.SysUtils, System.Classes;
+  System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB;
 
 type
   TDataTabelas = class(TDataModule)
+    ADOMasterSysMed: TADOConnection;
   private
     { Private declarations }
   public

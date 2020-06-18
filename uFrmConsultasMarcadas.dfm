@@ -1,4 +1,4 @@
-﻿object FrmConsultasMarcadas: TFrmConsultasMarcadas
+object FrmConsultasMarcadas: TFrmConsultasMarcadas
   Left = 0
   Top = 0
   Caption = 'Consultas marcadas'
@@ -349,15 +349,13 @@
     Height = 13
     Align = alTop
     Caption = 'CPf/CNPJ'
-    ExplicitLeft = 8
-    ExplicitTop = 5
-    ExplicitWidth = 447
+    ExplicitWidth = 46
   end
   object MaskEdit1: TMaskEdit
     Left = 0
     Top = 19
     Width = 89
-    Height = 23
+    Height = 21
     Align = alCustom
     EditMask = '000.000.000-00;1;_'
     MaxLength = 14
@@ -377,7 +375,6 @@
     Top = 48
     Width = 345
     Height = 145
-    DataSource = DataSource1
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -389,31 +386,5 @@
         Expanded = False
         Visible = True
       end>
-  end
-  object DataSource1: TDataSource
-    DataSet = ClientDataSet1
-    Left = 248
-    Top = 16
-  end
-  object ClientDataSet1: TClientDataSet
-    Aggregates = <>
-    Params = <>
-    Left = 296
-    Top = 16
-    object ClientDataSet1Nome: TStringField
-      FieldName = 'Nome'
-      Size = 100
-    end
-    object ClientDataSet1Médico: TStringField
-      FieldName = 'M'#233'dico'
-      Size = 100
-    end
-    object ClientDataSet1Data: TDateTimeField
-      FieldName = 'Data'
-    end
-  end
-  object SQLConnection1: TSQLConnection
-    Left = 192
-    Top = 16
   end
 end
