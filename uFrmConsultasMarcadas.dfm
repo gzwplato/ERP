@@ -2,8 +2,8 @@ object FrmConsultasMarcadas: TFrmConsultasMarcadas
   Left = 0
   Top = 0
   Caption = 'Consultas marcadas'
-  ClientHeight = 201
-  ClientWidth = 339
+  ClientHeight = 592
+  ClientWidth = 1111
   Color = clGradientActiveCaption
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -339,43 +339,59 @@ object FrmConsultasMarcadas: TFrmConsultasMarcadas
     FCCFFF07C000F83FFCCFFF07C000F07FFCCFFF83C000807FFCCFFF80400000FF
     E003FFC0000003FFE003FFF00000FFFFFFFFFFFFC000FFFFFFFFFFFFC000}
   OldCreateOrder = False
-  Position = poDesktopCenter
+  Position = poScreenCenter
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
+  object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 339
-    Height = 13
+    Width = 1111
+    Height = 41
     Align = alTop
-    Caption = 'CPf/CNPJ'
-    ExplicitWidth = 46
-  end
-  object MaskEdit1: TMaskEdit
-    Left = 0
-    Top = 19
-    Width = 89
-    Height = 21
-    Align = alCustom
-    EditMask = '000.000.000-00;1;_'
-    MaxLength = 14
+    Color = clWhite
+    ParentBackground = False
     TabOrder = 0
-    Text = '   .   .   -  '
-  end
-  object Button1: TButton
-    Left = 95
-    Top = 19
-    Width = 75
-    Height = 23
-    Caption = 'Buscar'
-    TabOrder = 1
+    ExplicitLeft = 360
+    ExplicitTop = 104
+    ExplicitWidth = 185
+    object Label1: TLabel
+      Left = 5
+      Top = 3
+      Width = 19
+      Height = 13
+      Caption = 'CPF'
+    end
+    object EdtMascCpf: TMaskEdit
+      Left = 2
+      Top = 19
+      Width = 89
+      Height = 21
+      Align = alCustom
+      EditMask = '000.000.000-00;1;_'
+      MaxLength = 14
+      TabOrder = 0
+      Text = '   .   .   -  '
+    end
+    object Button1: TButton
+      Left = 97
+      Top = 18
+      Width = 75
+      Height = 23
+      Caption = 'Buscar'
+      TabOrder = 1
+      OnClick = Button1Click
+    end
   end
   object DBGrid1: TDBGrid
-    Left = -6
-    Top = 48
-    Width = 345
-    Height = 145
-    TabOrder = 2
+    Left = 0
+    Top = 41
+    Width = 1111
+    Height = 551
+    Align = alClient
+    Color = clActiveCaption
+    DataSource = DsConsMarc
+    TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -384,7 +400,57 @@ object FrmConsultasMarcadas: TFrmConsultasMarcadas
     Columns = <
       item
         Expanded = False
+        FieldName = 'Nome'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'CPFCNPJ'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DATAcons'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Residante'
+        Width = 200
         Visible = True
       end>
+  end
+  object QryConsMarc: TADOQuery
+    Connection = DataTabelas.ADOMasterSysMed
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      '')
+    Left = 424
+    Top = 168
+    object QryConsMarcNome: TStringField
+      FieldName = 'Nome'
+      Size = 200
+    end
+    object QryConsMarcCPFCNPJ: TStringField
+      DisplayLabel = 'CPF'
+      FieldName = 'CPFCNPJ'
+      Size = 100
+    end
+    object QryConsMarcDATAcons: TDateTimeField
+      DisplayLabel = 'Data da Consulta'
+      FieldName = 'DATAcons'
+    end
+    object QryConsMarcResidante: TMemoField
+      FieldName = 'Residante'
+      BlobType = ftMemo
+    end
+  end
+  object DsConsMarc: TDataSource
+    DataSet = QryConsMarc
+    Left = 288
+    Top = 192
   end
 end

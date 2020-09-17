@@ -7,8 +7,9 @@ uses
   uFrmConsultasMarcadas in 'uFrmConsultasMarcadas.pas' {FrmConsultasMarcadas},
   unTabelas in 'unTabelas.pas' {DataTabelas: TDataModule},
   uFrmLogin in 'uFrmLogin.pas' {FrmLogin},
+  uFrmUsuario in 'uFrmUsuario.pas' {Form1},
   uFrmRelatorios in 'uFrmRelatorios.pas' {FrmRelAtestado},
-  uFrmUsuario in 'uFrmUsuario.pas' {Form1};
+  UfrmCadConsulta in 'UfrmCadConsulta.pas' {FrmCadConsultas};
 
 {$R *.res}
 
@@ -20,7 +21,6 @@ begin
   Application.CreateForm(TFrmCadastroPaciente, FrmCadastroPaciente);
   Application.CreateForm(TFrmConsultasMarcadas, FrmConsultasMarcadas);
   Application.CreateForm(TDataTabelas, DataTabelas);
-  Application.CreateForm(TFrmRelAtestado, FrmRelatorios);
-  Application.CreateForm(TForm1, FrmUsuario);
+  Application.CreateForm(TFrmCadConsultas, FrmCadConsultas);
   Application.Run;
 end.

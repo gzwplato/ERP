@@ -10,7 +10,7 @@ object FrmRelAtestado: TFrmRelAtestado
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poMainFormCenter
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel

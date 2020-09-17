@@ -339,7 +339,7 @@ object FrmLogin: TFrmLogin
     FCCFFF07C000F83FFCCFFF07C000F07FFCCFFF83C000807FFCCFFF80400000FF
     E003FFC0000003FFE003FFF00000FFFFFFFFFFFFC000FFFFFFFFFFFFC000}
   OldCreateOrder = False
-  Position = poDesigned
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel

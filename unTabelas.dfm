@@ -3,10 +3,13 @@ object DataTabelas: TDataTabelas
   Height = 238
   Width = 429
   object ADOMasterSysMed: TADOConnection
-    Connected = True
     ConnectionString = 
-      'Provider=SQLOLEDB.1;Persist Security Info=False;User ID=sa;Initi' +
-      'al Catalog=SYSMED;Data Source=DESKTOP-31OK8TD\MATHEUSPEREIRA'
+      'Provider=SQLOLEDB.1;Password=123;Persist Security Info=True;User' +
+      ' ID=sa;Initial Catalog=SYSMED;Data Source=DESKTOP-31OK8TD\MATHEU' +
+      'SPEREIRA;Use Procedure for Prepare=1;Auto Translate=True;Packet ' +
+      'Size=4096;Workstation ID=DESKTOP-31OK8TD;Use Encryption for Data' +
+      '=False;Tag with column collation when possible=False'
+    LoginPrompt = False
     Provider = 'SQLOLEDB.1'
     Left = 128
     Top = 48

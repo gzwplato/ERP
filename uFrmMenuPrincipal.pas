@@ -20,8 +20,6 @@ type
     Consulta1: TMenuItem;
     Exames1: TMenuItem;
     Procedimentos1: TMenuItem;
-    Image1: TImage;
-    LblNomeempresa: TLabel;
     A1: TMenuItem;
     Relatrios1: TMenuItem;
     Atestado1: TMenuItem;
@@ -30,6 +28,7 @@ type
     LaudoPsicolgico1: TMenuItem;
     Sistema1: TMenuItem;
     Usuario1: TMenuItem;
+    Panel1: TPanel;
     procedure Timer1Timer(Sender: TObject);
     procedure Paciente1Click(Sender: TObject);
     procedure Marcadas1Click(Sender: TObject);
@@ -53,11 +52,13 @@ implementation
 {$R *.dfm}
 
 uses UFrmCadPaciente, uFrmConsultasMarcadas, uFrmLogin, uFrmRelatorios,
-  uFrmUsuario;
+  uFrmUsuario, UfrmCadConsulta, unTabelas;
 
 procedure TFrmPai.A1Click(Sender: TObject);
 begin
-  MessageDlg('Tela ainda em construção', mtInformation, [mbOK], 0);
+  FrmCadConsultas.Caption := 'Cadastro de Consulta';
+  FrmCadConsultas.ShowModal;
+  FrmCadConsultas.Visible := true;
 end;
 
 procedure TFrmPai.Agendamentos1Click(Sender: TObject);

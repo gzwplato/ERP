@@ -340,7 +340,8 @@ object FrmCadastroPaciente: TFrmCadastroPaciente
     FCCFFF07C000F83FFCCFFF07C000F07FFCCFFF83C000807FFCCFFF80400000FF
     E003FFC0000003FFE003FFF00000FFFFFFFFFFFFC000FFFFFFFFFFFFC000}
   OldCreateOrder = False
-  Position = poDesktopCenter
+  Position = poScreenCenter
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -367,10 +368,6 @@ object FrmCadastroPaciente: TFrmCadastroPaciente
     Height = 195
     Align = alClient
     TabOrder = 1
-    ExplicitLeft = 200
-    ExplicitTop = 120
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object Label1: TLabel
       Left = 3
       Top = 5
@@ -379,86 +376,22 @@ object FrmCadastroPaciente: TFrmCadastroPaciente
       Caption = 'Nome'
     end
     object LblDatanasc: TLabel
-      Left = 3
-      Top = 101
+      Left = 437
+      Top = 6
       Width = 95
       Height = 13
       Caption = 'Data de nascimento'
     end
     object Label2: TLabel
-      Left = 3
-      Top = 49
+      Left = 342
+      Top = 6
       Width = 19
       Height = 13
       Caption = 'CPF'
     end
-    object SpeedButton1: TSpeedButton
-      Left = 87
-      Top = 164
-      Width = 40
-      Height = 25
-      Glyph.Data = {
-        F6060000424DF606000000000000360000002800000018000000180000000100
-        180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
-        FFFFFF769EC7C3E1FFC3E1FF82B1E16A3312813F19813F19813F19813F19813F
-        19813F19813F19813F196A331282B1E1C3E1FFC3E1FF95B9DDFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFF7EA5CDC3E1FFC3E1FF82B1E16A331285441B85441B
-        85441B85441B85441B85441B85441B85441B6A331282B1E1C3E1FFC3E1FF98BC
-        E0FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF789DC3C3E1FFC3E1FF82B1E16A
-        331289491D89491D89491D89491D89491D89491D89491D89491D6A331282B1E1
-        C3E1FFC3E1FF9DC0E3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF749AC1C3E1
-        FFC3E1FF82B1E16A33128E4F1F8E4F1F8E4F1F8E4F1F8E4F1F8E4F1F8E4F1F8E
-        4F1F6A331282B1E1C3E1FFC3E1FF99BDE1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFF9455219455219455219455216A33129455219455219455219455219455
-        219455219455219455216A3312945521945521945521945521FFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFF995B24995B24995B24995B24995B24995B24995B24
-        995B24995B24995B24995B24995B24995B24995B24995B24995B24995B24995B
-        24FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBDA9989D61269D61269D61269D
-        61269D61269D61269D61269D61269D61269D61269D61269D61269D61269D6126
-        9D61269D6126BCA89AFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAF9F
-        93A16527A16527A16527A16527A1652793B8DC93B8DC93B8DC93B8DCA16527A1
-        6527A16527A16527A16527AF9F94FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFD6BEA5B48554A46829A468295681AD5681AD507CAB507C
-        AB5681AD5681ADA46829A46829B48555D6BEA5FFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE3ECF47DA8D3
-        7AB4ED7DB7F07DB7F07AB4EE7BA7D3E2EBF3FFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFF8BB0D586C2FEACD5FE3D3D743D3D74ADD6FE86C2FE8AAFD5FFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFB8CDE37CB7F2A2D0FEB0D8FE8AAEF380A8F28FC6FE7ABCFE62
-        ADF9ABC2DCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF78A6D395CAFEA9D4FE85C2FE73B9FD71B8
-        FD61AFFD71B7FD399CFD4670B1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC9D9E91D4876AAD4FE8CC5FD
-        75BAFD65B1FD61AFFD5FAFFD6DB5FD58ABFD1D4876C9D9E9FFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF1D48761D
-        4876B4DAFEC1C1C1000001FFFFFFBBBBBB000000FFFFFF75B9FD1D48761D4876
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFF1D48761E487594B7DA708DAA61666B5F63675F636661676C6B89A777
-        A5D31F49751D4876FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFF1E497643618295A7BA9CA0A49D9D9D9D9D9D9D9D
-        9D9D9D9D7172736F7378516479214A77FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4D4D4DB6B6B6CCCCCCCCCCCC
-        CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCBDBDBD5D5D5DFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF3A3A3A85
-        85858A8A8A7E7E7E7070706363635757574B4B4B4141413A3A3A363636313131
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFF7878789B9B9BBABABAB5B5B5AAAAAA9C9C9C8E8E8E7E7E7E6E6E6E5F
-        5F5F4A4A4A777777FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFEBEBEB7777779F9F9FACACACACACACACACACA5A5
-        A59B9B9B8F8F8F7C7C7C707070F2F2F2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF1F1F1B0B0B07C7C7C
-        6464645E5E5E5E5E5E6666667D7D7DB6B6B6F4F4F4FFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
-      OnClick = SpeedButton1Click
-    end
     object SBTGerarDoc: TSpeedButton
-      Left = 134
-      Top = 164
+      Left = 3
+      Top = 165
       Width = 40
       Height = 25
       Glyph.Data = {
@@ -574,17 +507,24 @@ object FrmCadastroPaciente: TFrmCadastroPaciente
         DCDCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       NumGlyphs = 2
     end
+    object Label3: TLabel
+      Left = 3
+      Top = 44
+      Width = 58
+      Height = 13
+      Caption = 'Observa'#231#227'o'
+    end
     object EdtNome: TEdit
       Left = 3
-      Top = 24
+      Top = 22
       Width = 320
       Height = 21
       TabOrder = 0
       OnKeyPress = EdtNomeKeyPress
     end
-    object DateTimePicker1: TDateTimePicker
-      Left = 3
-      Top = 120
+    object DtmDataNasci: TDateTimePicker
+      Left = 437
+      Top = 22
       Width = 104
       Height = 21
       Date = 43692.000000000000000000
@@ -592,17 +532,17 @@ object FrmCadastroPaciente: TFrmCadastroPaciente
       TabOrder = 1
     end
     object MmObs: TMemo
-      Left = 202
-      Top = 49
-      Width = 358
-      Height = 140
+      Left = 3
+      Top = 56
+      Width = 537
+      Height = 103
       Lines.Strings = (
         'Obs')
       TabOrder = 2
     end
     object BtnEnviarDados: TButton
-      Left = 6
-      Top = 164
+      Left = 49
+      Top = 165
       Width = 74
       Height = 25
       Caption = 'Enviar'
@@ -610,8 +550,8 @@ object FrmCadastroPaciente: TFrmCadastroPaciente
       OnClick = BtnEnviarDadosClick
     end
     object EdtTipoPessoa: TMaskEdit
-      Left = 3
-      Top = 68
+      Left = 340
+      Top = 22
       Width = 84
       Height = 21
       EditMask = '000.000.000-00;1;_'
@@ -619,6 +559,84 @@ object FrmCadastroPaciente: TFrmCadastroPaciente
       TabOrder = 4
       Text = '   .   .   -  '
       OnKeyPress = EdtTipoPessoaKeyPress
+    end
+    object BtnSair: TButton
+      Left = 466
+      Top = 158
+      Width = 74
+      Height = 25
+      Caption = 'Sair'
+      TabOrder = 5
+      OnClick = BtnSairClick
+    end
+  end
+  object CmdUsuario: TADOCommand
+    CommandText = 
+      'insert into CadastroPaciente(Nome, CPFCNPJ, DATANASC, Observacao' +
+      ')'#13#10'values(:Nome, :CPFCNPJ, :DATANASC, :Observacao)'
+    Connection = DataTabelas.ADOMasterSysMed
+    Parameters = <
+      item
+        Name = 'Nome'
+        Attributes = [paNullable]
+        DataType = ftString
+        NumericScale = 255
+        Precision = 255
+        Size = 1000
+        Value = Null
+      end
+      item
+        Name = 'CPFCNPJ'
+        DataType = ftString
+        NumericScale = 255
+        Precision = 255
+        Size = 11
+        Value = Null
+      end
+      item
+        Name = 'DATANASC'
+        Attributes = [paNullable]
+        DataType = ftWideString
+        NumericScale = 255
+        Precision = 255
+        Size = 10
+        Value = Null
+      end
+      item
+        Name = 'Observacao'
+        Attributes = [paNullable, paLong]
+        DataType = ftString
+        NumericScale = 255
+        Precision = 255
+        Size = 2147483647
+        Value = Null
+      end>
+    Left = 312
+    Top = 184
+  end
+  object QryUsuario: TADOQuery
+    Connection = DataTabelas.ADOMasterSysMed
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'select * from dbo.CadastroPaciente')
+    Left = 240
+    Top = 176
+    object QryUsuarioNome: TStringField
+      FieldName = 'Nome'
+      Size = 10
+    end
+    object QryUsuarioDATANASC: TWideStringField
+      FieldName = 'DATANASC'
+      Size = 10
+    end
+    object QryUsuarioObservacao: TMemoField
+      FieldName = 'Observacao'
+      BlobType = ftMemo
+    end
+    object QryUsuarioCPFCNPJ: TStringField
+      FieldName = 'CPFCNPJ'
+      Size = 11
     end
   end
 end
