@@ -26,6 +26,7 @@ type
   private
     { Private declarations }
   public
+
     { Public declarations }
     function ValidarLogin : String;
   end;
@@ -66,17 +67,26 @@ begin
 end;
 
 function TFrmLogin.ValidarLogin: String;
+var
+  senha: integer;
 begin
   QryLogin.Close;
   QryLogin.Open;
-  while (QryLoginUsuario.AsString <> EdtLogin.Text)  and (QryLoginsenha.AsInteger <> StrToInt(EdtSenha.Text)) do
+  QryLogin.First;
+  senha := StrToInt(EdtSenha.Text);
+
+  while (QryLoginUsuario.AsString <> EdtLogin.Text) or (QryLoginsenha.AsInteger <> senha) do
   begin
-    if QryLogin.Eof then
-    begin
-      raise Exception.Create('Você não está cadastrado');
-    end;
-    QryLogin.Next
-  end;
+   if (QryLogin.Eof)  then
+   begin
+     if (QryLoginUsuario.AsString <> EdtLogin.Text) or (QryLoginsenha.AsInteger <> senha)  then
+     begin
+       raise Exception.Create('Credenciais Incorretas');
+     end;
+   end;
+  QryLogin.Next
+end;
+
 
 
 end;
