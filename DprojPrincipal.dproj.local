@@ -15,23 +15,26 @@
     <Transaction>2019/08/18 10:25:11.000.144,C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\unTabelas.dfm=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.dfm</Transaction>
     <Transaction>2019/08/18 10:25:11.000.144,C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\unTabelas.pas=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.pas</Transaction>
     <Transaction>2019/08/23 09:09:11.000.743,=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.pas</Transaction>
-    <Transaction>2019/08/23 09:28:04.000.095,C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.pas=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\uFrmLogin.pas</Transaction>
     <Transaction>2019/08/23 09:28:04.000.095,C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.dfm=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\uFrmLogin.dfm</Transaction>
+    <Transaction>2019/08/23 09:28:04.000.095,C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.pas=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\uFrmLogin.pas</Transaction>
     <Transaction>2019/08/27 13:26:47.000.391,=C:\Users\1547\Documents\Embarcadero\Studio\Projects\Projeto1\Unit1.pas</Transaction>
     <Transaction>2019/08/27 13:59:19.000.984,=C:\Users\1547\Documents\ERP\Unit1.pas</Transaction>
-    <Transaction>2019/08/27 14:04:23.000.980,C:\Users\1547\Documents\ERP\Unit1.pas=C:\Users\1547\Documents\ERP\uFrmRelatorios.pas</Transaction>
     <Transaction>2019/08/27 14:04:23.000.980,C:\Users\1547\Documents\ERP\Unit1.dfm=C:\Users\1547\Documents\ERP\uFrmRelatorios.dfm</Transaction>
+    <Transaction>2019/08/27 14:04:23.000.980,C:\Users\1547\Documents\ERP\Unit1.pas=C:\Users\1547\Documents\ERP\uFrmRelatorios.pas</Transaction>
     <Transaction>2019/08/29 10:55:40.000.878,=C:\Users\1547\Documents\ERP\Unit1.pas</Transaction>
     <Transaction>2019/08/29 11:22:37.000.902,C:\Users\1547\Documents\ERP\Unit1.pas=C:\Users\1547\Documents\ERP\uFrmUsuario.pas</Transaction>
     <Transaction>2019/08/29 11:22:37.000.903,C:\Users\1547\Documents\ERP\Unit1.dfm=C:\Users\1547\Documents\ERP\uFrmUsuario.dfm</Transaction>
     <Transaction>2020/06/17 21:53:53.000.506,=D:\ProjetosPessoais\delphi\erp\Unit2.pas</Transaction>
-    <Transaction>2020/09/16 20:30:20.582,=D:\ProjetosPessoais\delphi\erp\Unit2.pas</Transaction>
-    <Transaction>2020/09/16 20:39:44.793,D:\ProjetosPessoais\delphi\erp\UfrmCadConsulta.pas=D:\ProjetosPessoais\delphi\erp\Unit2.pas</Transaction>
-    <Transaction>2020/09/16 20:39:44.793,D:\ProjetosPessoais\delphi\erp\UfrmCadConsulta.dfm=D:\ProjetosPessoais\delphi\erp\Unit2.dfm</Transaction>
-    <Transaction>2020/09/16 20:50:59.591,D:\ProjetosPessoais\delphi\erp\uFrmRelatorios.pas=</Transaction>
-    <Transaction>2020/09/16 20:51:48.170,D:\ProjetosPessoais\delphi\erp\uFrmUsuario.pas=</Transaction>
-    <Transaction>2020/09/16 20:52:14.776,=D:\ProjetosPessoais\delphi\erp\uFrmUsuario.pas</Transaction>
-    <Transaction>2020/09/16 20:52:23.734,=D:\ProjetosPessoais\delphi\erp\uFrmRelatorios.pas</Transaction>
+    <Transaction>2020/09/16 20:30:20.000.582,=D:\ProjetosPessoais\delphi\erp\Unit2.pas</Transaction>
+    <Transaction>2020/09/16 20:39:44.000.793,D:\ProjetosPessoais\delphi\erp\UfrmCadConsulta.pas=D:\ProjetosPessoais\delphi\erp\Unit2.pas</Transaction>
+    <Transaction>2020/09/16 20:39:44.000.793,D:\ProjetosPessoais\delphi\erp\UfrmCadConsulta.dfm=D:\ProjetosPessoais\delphi\erp\Unit2.dfm</Transaction>
+    <Transaction>2020/09/16 20:50:59.000.591,D:\ProjetosPessoais\delphi\erp\uFrmRelatorios.pas=</Transaction>
+    <Transaction>2020/09/16 20:51:48.000.170,D:\ProjetosPessoais\delphi\erp\uFrmUsuario.pas=</Transaction>
+    <Transaction>2020/09/16 20:52:14.000.776,=D:\ProjetosPessoais\delphi\erp\uFrmUsuario.pas</Transaction>
+    <Transaction>2020/09/16 20:52:23.000.734,=D:\ProjetosPessoais\delphi\erp\uFrmRelatorios.pas</Transaction>
+    <Transaction>2020/09/18 13:38:12.126,=D:\ProjetosPessoais\delphi\erp\Unit2.pas</Transaction>
+    <Transaction>2020/09/18 13:46:50.433,D:\ProjetosPessoais\delphi\erp\UfrCadResidente.pas=D:\ProjetosPessoais\delphi\erp\Unit2.pas</Transaction>
+    <Transaction>2020/09/18 13:46:50.433,D:\ProjetosPessoais\delphi\erp\UfrCadResidente.dfm=D:\ProjetosPessoais\delphi\erp\Unit2.dfm</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="uFrmLogin.pas"/>
@@ -50,5 +53,7 @@
     <File Path="uFrmUsuario.dfm"/>
     <File Path="uFrmRelatorios.pas"/>
     <File Path="uFrmRelatorios.dfm"/>
+    <File Path="UfrCadResidente.pas"/>
+    <File Path="UfrCadResidente.dfm"/>
   </ProjectSortOrder>
 </BorlandProject>

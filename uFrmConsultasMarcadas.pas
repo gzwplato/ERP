@@ -52,7 +52,7 @@ begin
   QryConsMarc.SQL.Clear;
   if CpfCnpj <> '' then
   begin
-    QryConsMarc.SQL.Add('Select * from dbo.Consultas where CPFCNPJ ='+ CpfCnpj);
+    QryConsMarc.SQL.Add('Select * from dbo.Consultas where CPFCNPJ = '+ ''+ CpfCnpj+'');
     QryConsMarc.Open;
   end
   else

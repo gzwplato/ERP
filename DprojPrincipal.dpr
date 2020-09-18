@@ -9,7 +9,8 @@ uses
   uFrmLogin in 'uFrmLogin.pas' {FrmLogin},
   uFrmUsuario in 'uFrmUsuario.pas' {Form1},
   uFrmRelatorios in 'uFrmRelatorios.pas' {FrmRelAtestado},
-  UfrmCadConsulta in 'UfrmCadConsulta.pas' {FrmCadConsultas};
+  UfrmCadConsulta in 'UfrmCadConsulta.pas' {FrmCadConsultas},
+  UfrCadResidente in 'UfrCadResidente.pas' {FrmCadResidente};
 
 {$R *.res}
 
@@ -22,5 +23,6 @@ begin
   Application.CreateForm(TFrmConsultasMarcadas, FrmConsultasMarcadas);
   Application.CreateForm(TDataTabelas, DataTabelas);
   Application.CreateForm(TFrmCadConsultas, FrmCadConsultas);
+  Application.CreateForm(TFrmCadResidente, FrmCadResidente);
   Application.Run;
 end.

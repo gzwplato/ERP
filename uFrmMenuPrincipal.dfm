@@ -399,16 +399,16 @@ object FrmPai: TFrmPai
         Caption = 'Agendar'
         OnClick = A1Click
       end
-      object LaudoPsicolgico1: TMenuItem
-        Caption = 'Laudo Psicol'#243'gico'
-        OnClick = LaudoPsicolgico1Click
-      end
     end
     object Cadastro1: TMenuItem
       Caption = 'Cadastro'
       object Paciente1: TMenuItem
         Caption = 'Paciente'
         OnClick = Paciente1Click
+      end
+      object CadastrodeResidente1: TMenuItem
+        Caption = 'Cadastro de Residente'
+        OnClick = CadastrodeResidente1Click
       end
     end
     object Clientes1: TMenuItem

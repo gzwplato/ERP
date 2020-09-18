@@ -25,10 +25,10 @@ type
     Atestado1: TMenuItem;
     Atestado2: TMenuItem;
     Agendamentos1: TMenuItem;
-    LaudoPsicolgico1: TMenuItem;
     Sistema1: TMenuItem;
     Usuario1: TMenuItem;
     Panel1: TPanel;
+    CadastrodeResidente1: TMenuItem;
     procedure Timer1Timer(Sender: TObject);
     procedure Paciente1Click(Sender: TObject);
     procedure Marcadas1Click(Sender: TObject);
@@ -38,6 +38,7 @@ type
     procedure Usuario1Click(Sender: TObject);
     procedure LaudoPsicolgico1Click(Sender: TObject);
     procedure A1Click(Sender: TObject);
+    procedure CadastrodeResidente1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,7 +53,7 @@ implementation
 {$R *.dfm}
 
 uses UFrmCadPaciente, uFrmConsultasMarcadas, uFrmLogin, uFrmRelatorios,
-  uFrmUsuario, UfrmCadConsulta, unTabelas;
+  uFrmUsuario, UfrmCadConsulta, unTabelas, UfrCadResidente;
 
 procedure TFrmPai.A1Click(Sender: TObject);
 begin
@@ -80,6 +81,12 @@ begin
   FrmRelatorios.Caption := 'Relatório de Atestado';
   FrmRelatorios.ShowModal;
   FrmRelatorios.Visible := true;
+end;
+
+procedure TFrmPai.CadastrodeResidente1Click(Sender: TObject);
+begin
+  FrmCadResidente.Caption := 'Cadastro de residente';
+  FrmCadResidente.ShowModal;
 end;
 
 procedure TFrmPai.LaudoPsicolgico1Click(Sender: TObject);
