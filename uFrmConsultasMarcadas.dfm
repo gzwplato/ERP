@@ -340,7 +340,7 @@ object FrmConsultasMarcadas: TFrmConsultasMarcadas
     E003FFC0000003FFE003FFF00000FFFFFFFFFFFFC000FFFFFFFFFFFFC000}
   OldCreateOrder = False
   Position = poScreenCenter
-  OnCreate = FormCreate
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -352,9 +352,6 @@ object FrmConsultasMarcadas: TFrmConsultasMarcadas
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 360
-    ExplicitTop = 104
-    ExplicitWidth = 185
     object Label1: TLabel
       Left = 5
       Top = 3
@@ -417,8 +414,7 @@ object FrmConsultasMarcadas: TFrmConsultasMarcadas
       end
       item
         Expanded = False
-        FieldName = 'Residante'
-        Width = 200
+        FieldName = 'Residente'
         Visible = True
       end>
   end
@@ -426,8 +422,6 @@ object FrmConsultasMarcadas: TFrmConsultasMarcadas
     Connection = DataTabelas.ADOMasterSysMed
     CursorType = ctStatic
     Parameters = <>
-    SQL.Strings = (
-      '')
     Left = 424
     Top = 168
     object QryConsMarcNome: TStringField
@@ -443,9 +437,13 @@ object FrmConsultasMarcadas: TFrmConsultasMarcadas
       DisplayLabel = 'Data da Consulta'
       FieldName = 'DATAcons'
     end
-    object QryConsMarcResidante: TMemoField
-      FieldName = 'Residante'
-      BlobType = ftMemo
+    object QryConsMarcHora: TStringField
+      FieldName = 'Hora'
+      Size = 5
+    end
+    object QryConsMarcResidente: TStringField
+      FieldName = 'Residente'
+      Size = 50
     end
   end
   object DsConsMarc: TDataSource

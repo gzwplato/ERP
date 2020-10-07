@@ -113,7 +113,7 @@
             <Form>FrmLogin</Form>
         </DCCReference>
         <DCCReference Include="uFrmUsuario.pas">
-            <Form>Form1</Form>
+            <Form>FrmUsuario</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uFrmRelatorios.pas">
@@ -149,9 +149,8 @@
                     <Source Name="MainSource">DprojPrincipal.dpr</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\DataExplorerDBXPluginEnt260.bpl">DBExpress Enterprise Data Explorer Integration</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k260.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\1547\Documents\fortesreport-ce.git\Binary\LibD26\frce.bpl">File C:\Users\1547\Documents\fortesreport-ce.git\Binary\LibD26\frce.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp260.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">

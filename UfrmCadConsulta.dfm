@@ -31,7 +31,6 @@ object FrmCadConsultas: TFrmCadConsultas
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 527
   end
   object Panel2: TPanel
     Left = 0
@@ -40,9 +39,6 @@ object FrmCadConsultas: TFrmCadConsultas
     Height = 109
     Align = alClient
     TabOrder = 1
-    ExplicitTop = 47
-    ExplicitWidth = 527
-    ExplicitHeight = 107
     object Label2: TLabel
       Left = 372
       Top = 4
@@ -133,11 +129,14 @@ object FrmCadConsultas: TFrmCadConsultas
     Height = 21
     TabOrder = 2
   end
-  object EdtResidente: TEdit
+  object DbLResidente: TDBLookupComboBox
     Left = 3
     Top = 110
-    Width = 265
+    Width = 198
     Height = 21
+    KeyField = 'Nome'
+    ListField = 'Nome'
+    ListSource = DsResidente
     TabOrder = 3
   end
   object QryPaciente: TADOQuery
@@ -154,8 +153,8 @@ object FrmCadConsultas: TFrmCadConsultas
   end
   object CmmdConsulta: TADOCommand
     CommandText = 
-      'insert into Consultas(Nome, CPFCNPJ, DATAcons, Residante, Hora)'#13 +
-      #10'values(:Nome, :CPFCNPJ, :DATAcons, :Residante, :Hora)'
+      'insert into Consultas(Nome, CPFCNPJ, DATAcons, Residente, Hora)'#13 +
+      #10'values(:Nome, :CPFCNPJ, :DATAcons, :Residente, :Hora)'
     Connection = DataTabelas.ADOMasterSysMed
     Parameters = <
       item
@@ -186,12 +185,12 @@ object FrmCadConsultas: TFrmCadConsultas
         Value = Null
       end
       item
-        Name = 'Residante'
-        Attributes = [paNullable, paLong]
+        Name = 'Residente'
+        Attributes = [paNullable]
         DataType = ftString
         NumericScale = 255
         Precision = 255
-        Size = 2147483647
+        Size = 50
         Value = Null
       end
       item
@@ -217,7 +216,7 @@ object FrmCadConsultas: TFrmCadConsultas
     Parameters = <>
     SQL.Strings = (
       'Select * from dbo.CadastroResidente')
-    Left = 320
+    Left = 336
     Top = 8
     object QryResidenteNome: TStringField
       FieldName = 'Nome'

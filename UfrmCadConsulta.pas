@@ -29,8 +29,8 @@ type
     QryResidenteAtividade: TStringField;
     MaskHora: TMaskEdit;
     Label4: TLabel;
-    EdtResidente: TEdit;
     Residente: TLabel;
+    DbLResidente: TDBLookupComboBox;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure DBLookupComboBox1Click(Sender: TObject);
@@ -97,13 +97,13 @@ begin
   CmmdConsulta.Parameters.ParamByName('Nome').Value := EdtNomePaciente.Text;
   CmmdConsulta.Parameters.ParamByName('CPFCNPJ').Value := Cpf;
   CmmdConsulta.Parameters.ParamByName('DATAcons').Value := data;
-  CmmdConsulta.Parameters.ParamByName('Residante').Value := EdtResidente.Text;
+  CmmdConsulta.Parameters.ParamByName('Residente').Value := DbLResidente.Text;
   CmmdConsulta.Parameters.ParamByName('Hora').Value := MaskHora.Text;
   CmmdConsulta.Execute;
 
   linkurl := 'https://web.whatsapp.com/send?phone' ;
   linkuri := '&text=';
-  result := linkurl + '85985172588' + linkuri + 'Sua conculta é com Dr.' + EdtResidente.Text +' dia '+ data + 'no Horário de' + MaskHora.Text;
+  result := linkurl + '85985172588' + linkuri + 'Sua conculta é com Dr.' + DbLResidente.Text +' dia '+ data + 'no Horário de' + MaskHora.Text;
 
   ShellExecute(Handle,'open', pchar(result), nil, nil, SW_SHOWMINIMIZED);
 
@@ -111,9 +111,7 @@ begin
 
   EdtCpf.Clear;
   EdtNomePaciente.Clear;
-  EdtResidente.Clear;
   MaskHora.Clear;
-
 end;
 
 procedure TFrmCadConsultas.DBLookupComboBox1Click(Sender: TObject);
@@ -124,6 +122,7 @@ end;
 procedure TFrmCadConsultas.FormCreate(Sender: TObject);
 begin
   QryPaciente.Close;
+  QryResidente.Open;
 end;
 
 end.

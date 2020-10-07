@@ -18,11 +18,12 @@ type
     QryConsMarcNome: TStringField;
     QryConsMarcCPFCNPJ: TStringField;
     QryConsMarcDATAcons: TDateTimeField;
-    QryConsMarcResidante: TMemoField;
     DsConsMarc: TDataSource;
     Label1: TLabel;
+    QryConsMarcHora: TStringField;
+    QryConsMarcResidente: TStringField;
     procedure Button1Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -52,7 +53,7 @@ begin
   QryConsMarc.SQL.Clear;
   if CpfCnpj <> '' then
   begin
-    QryConsMarc.SQL.Add('Select * from dbo.Consultas where CPFCNPJ = '+ ''+ CpfCnpj+'');
+    QryConsMarc.SQL.Add('Select * from dbo.Consultas where CPFCNPJ = '''+ CpfCnpj+'''');
     QryConsMarc.Open;
   end
   else
@@ -60,13 +61,12 @@ begin
     QryConsMarc.SQL.Add('Select * from dbo.Consultas');
     QryConsMarc.Open;
   end;
-
-  QryConsMarc.Close;
-
 end;
 
-procedure TFrmConsultasMarcadas.FormCreate(Sender: TObject);
+procedure TFrmConsultasMarcadas.FormClose(Sender: TObject;
+  var Action: TCloseAction);
 begin
+  QryConsMarc.Close;
   QryConsMarc.Close;
 end;
 

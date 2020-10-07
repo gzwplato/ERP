@@ -47,11 +47,15 @@ implementation
 uses uFrmMenuPrincipal, UFrmCadPaciente, unTabelas;
 
 procedure TFrmLogin.Button1Click(Sender: TObject);
+var
+  Menu : TFrmPai;
 begin
   ValidarLogin;
-  FrmLogin.Hide;
-  FrmPai.ShowModal;
+  Menu := TFrmPai.Create(Self);
+  Menu.ShowModal;
   FrmLogin.Close;
+
+
 end;
 
 procedure TFrmLogin.EdtLoginKeyPress(Sender: TObject; var Key: Char);
