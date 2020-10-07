@@ -8,7 +8,7 @@ uses
   Data.Win.ADODB;
 
 type
-  TForm1 = class(TForm)
+  TFrmUsuario = class(TForm)
     Panel1: TPanel;
     Panel2: TPanel;
     Button1: TButton;
@@ -36,7 +36,7 @@ type
   end;
 
 var
-  FrmUsuario : TForm1;
+  FrmUsuario : TFrmUsuario;
 
 implementation
 
@@ -44,7 +44,7 @@ implementation
 
 uses unTabelas;
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TFrmUsuario.Button1Click(Sender: TObject);
 begin
   EdtNome.Clear;
   EdtSenha.Clear;
@@ -55,7 +55,7 @@ begin
   EdtMatricula.Top := 42;
 end;
 
-procedure TForm1.Button2Click(Sender: TObject);
+procedure TFrmUsuario.Button2Click(Sender: TObject);
 begin
   EdtNome.Clear;
   EdtSenha.Clear;
@@ -68,7 +68,7 @@ begin
   EdtMatricula.Visible := true;
 end;
 
-procedure TForm1.Button3Click(Sender: TObject);
+procedure TFrmUsuario.Button3Click(Sender: TObject);
 begin
   EdtNome.Clear;
   EdtSenha.Clear;
@@ -79,25 +79,25 @@ begin
   EdtMatricula.Top := 42;
 end;
 
-procedure TForm1.EdtMatriculaKeyPress(Sender: TObject; var Key: Char);
+procedure TFrmUsuario.EdtMatriculaKeyPress(Sender: TObject; var Key: Char);
 begin
    if  (Key in['a'..'z']) or (Key in['A'..'Z']) then
     raise Exception.Create('Esse campo aceita apenas números');
 end;
 
-procedure TForm1.EdtNomeKeyPress(Sender: TObject; var Key: Char);
+procedure TFrmUsuario.EdtNomeKeyPress(Sender: TObject; var Key: Char);
 begin
   if  (Key in['1'..'9']) then
     raise Exception.Create('Esse campo aceita apenas letras');
 end;
 
-procedure TForm1.EdtSenhaKeyPress(Sender: TObject; var Key: Char);
+procedure TFrmUsuario.EdtSenhaKeyPress(Sender: TObject; var Key: Char);
 begin
   if  (Key in['a'..'z']) or (Key in['A'..'Z']) then
     raise Exception.Create('Esse campo aceita apenas números');
 end;
 
-procedure TForm1.SpeedButton1Click(Sender: TObject);
+procedure TFrmUsuario.SpeedButton1Click(Sender: TObject);
 begin
   ADOCommInsertUsusario.Parameters.ParamByName('Usuario').Value := EdtNome.Text;
   ADOCommInsertUsusario.Parameters.ParamByName('senha').Value := StrToInt(EdtSenha.Text);

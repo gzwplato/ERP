@@ -427,11 +427,9 @@ object FrmPai: TFrmPai
       Caption = 'Relat'#243'rios'
       object Atestado1: TMenuItem
         Caption = 'Declara'#231#227'o'
-        OnClick = Atestado1Click
       end
       object Atestado2: TMenuItem
         Caption = 'Atestado'
-        OnClick = Atestado2Click
       end
       object Agendamentos1: TMenuItem
         Caption = 'Agendamentos'

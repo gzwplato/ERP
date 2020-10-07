@@ -1,4 +1,4 @@
-object Form1: TForm1
+object FrmUsuario: TFrmUsuario
   Left = 0
   Top = 0
   Caption = 'Usu'#225'rio'

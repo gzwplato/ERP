@@ -32,9 +32,7 @@ type
     procedure Timer1Timer(Sender: TObject);
     procedure Paciente1Click(Sender: TObject);
     procedure Marcadas1Click(Sender: TObject);
-    procedure Atestado1Click(Sender: TObject);
     procedure Agendamentos1Click(Sender: TObject);
-    procedure Atestado2Click(Sender: TObject);
     procedure Usuario1Click(Sender: TObject);
     procedure LaudoPsicolgico1Click(Sender: TObject);
     procedure A1Click(Sender: TObject);
@@ -56,37 +54,27 @@ uses UFrmCadPaciente, uFrmConsultasMarcadas, uFrmLogin, uFrmRelatorios,
   uFrmUsuario, UfrmCadConsulta, unTabelas, UfrCadResidente;
 
 procedure TFrmPai.A1Click(Sender: TObject);
+var
+  CadConsultas : TFrmCadConsultas;
 begin
-  FrmCadConsultas.Caption := 'Cadastro de Consulta';
-  FrmCadConsultas.ShowModal;
-  FrmCadConsultas.Visible := true;
+  CadConsultas := TFrmCadConsultas.Create(Self);
+  CadConsultas.Show;
 end;
 
 procedure TFrmPai.Agendamentos1Click(Sender: TObject);
+var
+  Relatorios : TFrmRelAtestado;
 begin
-  FrmRelatorios.Caption := 'Relatório de Agendamento';
-  FrmRelatorios.ShowModal;
-  FrmRelatorios.Visible := true;
-end;
-
-procedure TFrmPai.Atestado1Click(Sender: TObject);
-begin
-  FrmRelatorios.Caption := 'Relatório de Declaração';
-  FrmRelatorios.ShowModal;
-  FrmRelatorios.Visible := true;
-end;
-
-procedure TFrmPai.Atestado2Click(Sender: TObject);
-begin
-  FrmRelatorios.Caption := 'Relatório de Atestado';
-  FrmRelatorios.ShowModal;
-  FrmRelatorios.Visible := true;
+  Relatorios := TFrmRelAtestado.Create(Self);
+  Relatorios.Show;
 end;
 
 procedure TFrmPai.CadastrodeResidente1Click(Sender: TObject);
+var
+  CadResidente : TFrmCadResidente;
 begin
-  FrmCadResidente.Caption := 'Cadastro de residente';
-  FrmCadResidente.ShowModal;
+  CadResidente := TFrmCadResidente.Create(Self);
+  CadResidente.Show;
 end;
 
 procedure TFrmPai.LaudoPsicolgico1Click(Sender: TObject);
@@ -95,15 +83,19 @@ begin
 end;
 
 procedure TFrmPai.Marcadas1Click(Sender: TObject);
+var
+  ConsultasMarcadas : TFrmConsultasMarcadas;
 begin
-  FrmConsultasMarcadas.ShowModal;
-  FrmConsultasMarcadas.Visible := true;
+  ConsultasMarcadas := TFrmConsultasMarcadas.Create(Self);
+  ConsultasMarcadas.Show;
 end;
 
 procedure TFrmPai.Paciente1Click(Sender: TObject);
+var
+  CadastroPaciente : TFrmCadastroPaciente;
 begin
-  FrmCadastroPaciente.ShowModal;
-  FrmCadastroPaciente.Visible := true;
+  CadastroPaciente := TFrmCadastroPaciente.Create(Self);
+  CadastroPaciente.Show;
 end;
 
 procedure TFrmPai.Timer1Timer(Sender: TObject);
@@ -113,8 +105,11 @@ begin
 end;
 
 procedure TFrmPai.Usuario1Click(Sender: TObject);
+var
+  Usuario : TFrmUsuario;
 begin
-  FrmUsuario.ShowModal;
+  Usuario := TFrmUsuario.Create(Self);
+  Usuario.Show;
 end;
 
 end.
